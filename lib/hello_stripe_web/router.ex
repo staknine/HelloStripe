@@ -17,6 +17,7 @@ defmodule HelloStripeWeb.Router do
   scope "/", HelloStripeWeb do
     pipe_through :browser
 
+    resources "/checkout-session", CheckoutSessionController, only: [:create]
     get "/", PageController, :index
   end
 
