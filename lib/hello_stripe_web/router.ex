@@ -18,6 +18,8 @@ defmodule HelloStripeWeb.Router do
     pipe_through :browser
 
     resources "/checkout-session", CheckoutSessionController, only: [:create]
+    get "/success", PageController, :success
+    get "/cancel", PageController, :cancel
     get "/", PageController, :index
   end
 
